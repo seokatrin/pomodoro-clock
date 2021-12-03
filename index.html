@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Clock</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <div class="pomodoro">
+        <audio class="song" loop>
+            <source src="">
+        </audio>
+        <audio class="finishSong">
+            <source src="./sounds/finish.mp3">
+        </audio>
+        <div class="timer-container">
+            <div class="sound-picker">
+                <button class="openSound">
+                    <i class="fas fa-music"></i>
+                </button>
+                <div class="sound-picker__sounds">
+                    <div class="closeWindow">
+                        <button class="closeSoundPicker"><i class="fas fa-times"></i></button>
+                    </div>
+                    <button class="btn" data-sound="./sounds/rain.mp3">
+                        <img src="./img/songs-img/rain.png" alt="rain">
+                    </button>
+                    <button class="btn" data-sound="./sounds/forest.mp3">
+                        <img src="./img/songs-img/forest.png" alt="forest">
+                    </button>
+                    <button class="btn" data-sound="./sounds/sea.mp3">
+                        <img src="./img/songs-img/sea.png" alt="sea">
+                    </button>
+                    <button class="btn" data-sound="./sounds/fire.mp3">
+                        <img src="./img/songs-img/fire.png" alt="fire">
+                    </button>
+                    <button class="stopSoundBbtn">
+                        <img src="./img/songs-img/sound.png" alt="fire">
+                    </button>
+                </div>
+            </div>
+            <div class="pomodoro-clock">
+                <div class="time">00:00</div>
+                <div class="buttons">
+                    <button class="stop">
+                        <i class="fas fa-undo-alt"></i>
+                    </button>
+                    <button class="start" data-type='start'>
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button class="next">
+                        <i class="fas fa-forward"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="setting">
+                <button class="openSettings">
+                    <i class="fas fa-cog icon"></i>
+                </button>
+                <div class="setting-time">
+                    <div class="session-length setting__length">
+                        <p>Время работы</p>
+                        <div class="setting-time-picker">
+                            <button class="addTime">
+                                <i class="fas fa-chevron-circle-up"></i>
+                            </button> 
+                            <input type="text" class="selected-sessionTime">
+                            <button class="decreaseTime">
+                                <i class="fas fa-chevron-circle-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="break-length setting__length">
+                        <p>Время перерыва</p>
+                        <div class="setting-time-picker">
+                            <button class="addTime">
+                                <i class="fas fa-chevron-circle-up"></i>
+                            </button> 
+                            <input type="text" class="selected-breakTime">
+                            <button class="decreaseTime">
+                                <i class="fas fa-chevron-circle-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="save">Save</button>
+                    <button class="closeSettings">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
